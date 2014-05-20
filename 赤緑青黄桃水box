@@ -1,0 +1,23 @@
+void draw(){
+  Y = Y + 10;
+  translate(250,250,0);
+  rotateX(150);
+  rotateY(Y);
+  box(100,100,100);
+}
+
+void keyPressed(){
+  if(key == 'x'){
+    fill(0,255,0);
+  }else if(key == 'z'){
+    fill(255,0,0);
+  }else if(key == 'c'){
+    fill(0,0,255);
+  }else if(key == 'v'){
+    fill(255,255,0);
+  }else if(key == 'b'){
+    fill(255,0,255);
+  }else if(key == 'n'){
+    fill(0,255,255);
+  }
+}
