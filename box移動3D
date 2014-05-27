@@ -1,0 +1,50 @@
+void setup() {
+  size(1300,800,P3D);
+}
+  void draw(){
+  background(255);
+  camera(0, -0xFF,   width,   
+    0, -0xFF/2, 0,   
+    0,  1,      0);    
+    
+  stroke(0);  
+  
+  pushMatrix();
+  for(int i = -width/2; i <= width / 2; i += 50) {  
+    line(-width/2, 0, i, width/2, 0, i);  
+    line(i, 0, -width/2, i, 0, width/2);  
+  }
+  popMatrix();
+   box();
+   keyPressed();
+}  
+
+void box(){
+  lights();
+  fill(#FFCEA0,255);
+  translate(X,-50+Y,Z);
+  rotateX(0);
+  rotateY(150);
+  rotateZ(0);
+  box(100,100,100);
+}
+
+float X,Y,Z;
+
+void keyPressed(){
+  if(keyPressed == true ){
+  if(key == 'f'){
+    X += 10;
+  }else if(key == 's'){
+    X -= 10;
+ /* }else if(key == 'r'){
+    Y -= 10;
+  }else if(key == 'x'){
+    Y += 10;*/
+  }else if(key == 'e'){
+    Z -= 10;
+  }else if(key == 'd'){
+    Z += 10;
+  }
+}
+}
