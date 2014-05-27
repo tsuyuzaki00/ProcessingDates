@@ -1,0 +1,18 @@
+void setup() {
+  size(500,500,P3D);
+  background(255,255,255);
+}
+
+void draw() {
+  lights();
+  noStroke();
+  background(255);
+  frameRate(100);
+  fill(random(1,255), random(1,255), random(1,255),255);
+  translate(random(1,500), random(1,500), 0);
+  sphere(50);
+  translate(random(1,500),random(1,500),0);
+  rotateX(150);
+  rotateY(150);
+  box(100,100,100);
+}
