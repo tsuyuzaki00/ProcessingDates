@@ -1,0 +1,34 @@
+int time = 6000;
+
+void setup() {
+  size(1300,800,P3D);
+}
+  void draw(){
+  background(255);
+  camera(0, -1000,  2200,   
+    0, 100, 0,   
+    0,  1,  0);    
+    
+  stroke(0);
+  
+  pushMatrix();
+  frameRate(100);
+  fill(0,0,0);
+  textSize(200);
+  text(time, -100, -900, 0);
+  time--;
+  if(time == 0){
+    exit();
+  }
+  popMatrix();
+  
+  pushMatrix();
+  for(int i = -width; i <= width ; i += 50) {  
+    line(-width, 0, i, width, 0, i);  
+    line(i, 0, -width, i, 0, width); 
+  }
+  popMatrix();
+   box();
+   keyPressed();
+   brock();
+}
