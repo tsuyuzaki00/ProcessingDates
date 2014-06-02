@@ -1,0 +1,107 @@
+void box(){
+  lights();
+  noStroke();
+  pushMatrix();
+  fill(0,0,255,255);
+  translate(-1000+X1,-50,-1000+Z1);
+  if(2250 < X1){
+    X1 = 2250;
+  }
+  if(-200 > X1){
+    X1 = -200;
+  }
+  if(-200 > Z1){
+    Z1 = -200;
+  }
+  if(2250 < Z1){
+    Z1 = 2250;
+  }
+  rotateY(-150+Y1);
+  box(100,100,100);
+  pushMatrix();
+  translate(0,0,80+A1);
+  if(200 < A1){
+    A1 -= 200;
+  }
+  sphere(50);
+  popMatrix();
+  popMatrix();
+  
+  pushMatrix();
+  fill(255,0,0,255);
+  translate(1000+X2,-50,-1000+Z2);
+  if(200 < X2){
+    X2 = 200;
+  }
+  if(-2250 > X2){
+    X2 = -2250;
+  }
+  if(-200 > Z2){
+    Z2 = -200;
+  }
+  if(2250 < Z2){
+    Z2 = 2250;
+  }
+  rotateY(150+Y2);
+  box(100,100,100);
+  pushMatrix();
+  translate(0,0,80+A2);
+  if(200 < A2){
+    A2 -= 200;
+  }
+  sphere(50);
+  popMatrix();
+  popMatrix();
+  
+  pushMatrix();
+  fill(255,255,0,255);
+  translate(-1000+X3,-50,1000+Z3);
+  if(2250 < X3){
+    X3 = 2250;
+  }
+  if(-200 > X3){
+    X3 = -200;
+  }
+  if(-2250 > Z3){
+    Z3 = -2250;
+  }
+  if(200 < Z3){
+    Z3 = 200;
+  }
+  rotateY(-450+Y3);
+  box(100,100,100);
+  pushMatrix();
+  translate(0,0,80+A3);
+  if(200 < A3){
+    A3 -= 200;
+  }
+  sphere(50);
+  popMatrix();
+  popMatrix();
+  
+  pushMatrix();
+  fill(0,255,0,255);
+  translate(1000+X4,-50,1000+Z4);
+  if(200 < X4){
+    X4 = 200;
+  }
+  if(-2250 > X4){
+    X4 = -2250;
+  }
+  if(-2250 > Z4){
+    Z4 = -2250;
+  }
+  if(200 < Z4){
+    Z4 = 200;
+  }
+  rotateY(450+Y4);
+  box(100,100,100);
+  pushMatrix();
+  translate(0,0,80+A4);
+  if(200 < A4){
+    A4 -= 200;
+  }
+  sphere(50);
+  popMatrix();
+   popMatrix();
+}
