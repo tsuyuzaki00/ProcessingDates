@@ -1,0 +1,30 @@
+float x;
+float y;
+float w;
+float h;
+
+void setup(){
+  size(300,300);
+  background(255);
+  rect(x=50,y=130,w=200,h=60);
+  fill(0);
+  textSize(30);
+  text("touch game",65,120);
+  textSize(50);
+  text("START",70,180);
+}
+
+void draw(){
+}
+
+
+void mouseClicked() {
+  float mx = mouseX;
+  float my = mouseY;
+  if(x < mx && mx < x + w && y < my && my < y + h) {
+  background(255);
+  fill(255,0,0);
+  stroke(255,0,0);
+  rect(x=random(1,250),y=random(1,250),w=50,h=50);
+}
+}
